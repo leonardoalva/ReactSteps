@@ -5,7 +5,7 @@ function Card({producto,descripcion,precio}) {
   <header>
     <h1 className="Card-Title">{producto}</h1>
     <h3 className="Card-Texto">{descripcion}</h3>
-    <p className="Card-Precio">{precio}</p>
+    <p className="Card-Precio">$ {precio}</p>
   </header>
 </article>
 

@@ -41,9 +41,20 @@
   color: #888;
 }
 
+.Card-Precio{
+  font-size: 15px;
+  color: #6e6e6e;
+  font-weight: bold;
+}
+
+.Card-Texto{
+  font-size: 25px;
+  color: #bdbdbd;
+}
 
 .Card-Title {
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .Div-Contenedor {
