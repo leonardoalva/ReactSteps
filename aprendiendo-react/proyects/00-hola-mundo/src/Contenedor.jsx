@@ -13,6 +13,7 @@ function Contenedor() {
       name="Miguel Angel Durán" 
       isFollowing={true}/> */}
 
+      
     <Card producto="Titulo1" descripcion="esto es una descripcion" precio="este es el precio"/>
 
     <Card producto="Titulo2" descripcion="esto es una descripcion" precio="este es el precio"/>
