@@ -7,18 +7,16 @@ function Contenedor() {
   return (
 <>
 <div className='Div-Contenedor'>
-    <Counter />
-
-    <div>      
-    <TwitterFollowCard userName="DonareloV" name="Leonardo Alva" isFollowing/>
-    <TwitterFollowCard userName="midudev" name="Miguel Angel" isFollowing />
-    <TwitterFollowCard userName="elonmusk" name="Elon Musk" isFollowing />
-    <TwitterFollowCard userName="jack" name="Jack Dorsey" />
-    <TwitterFollowCard userName="billgates" name="Bill Gates" />
-    </div>
+    {/* <Counter />
+    <TwitterFollowCard 
+      userName="midudev" 
+      name="Miguel Angel Durán" 
+      isFollowing={true}/> */}
 
     <Card producto="Titulo1" descripcion="esto es una descripcion" precio="este es el precio"/>
+
     <Card producto="Titulo2" descripcion="esto es una descripcion" precio="este es el precio"/>
+    
     <Card producto="Titulo3" descripcion="esto es una descripcion" precio="este es el precio"/>
 </div>
 
