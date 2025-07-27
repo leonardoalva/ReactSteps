@@ -6,8 +6,8 @@ function Card({producto,descripcion,precio,categoria}) {
 <article className="Card-Size"> 
   <header>
     <h1 className="Card-Title">{producto}</h1>
-    <p className="Card-p">{categoria}</p>
-    <h3 className="Card-Texto">{descripcion}</h3>
+    <h5 className="Card-p">{categoria}</h5>
+    <p className="Card-Texto">{descripcion}</p>
     <p className="Card-Precio">$ {precio}</p>
   </header>
   <button>
