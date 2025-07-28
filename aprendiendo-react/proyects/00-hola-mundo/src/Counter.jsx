@@ -16,11 +16,13 @@ function Counter() {
     };
 
   return (
-    <div>
-      <h1>Counter: {count}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+    <>
+      <h1>{count}</h1>
+    <div className="Container-Counter">
+      <button className={"boton-Compra"} onClick={increment}>Increment</button>
+      <button className={"boton-Compra"} onClick={decrement}>Decrement</button>
     </div>
+    </>
   );
 }
 

@@ -24,9 +24,9 @@ function Contenedor() {
             descripcion={item.description}
             precio={item.price}
             categoria={item.category}
-            imagen={item.images}
-            key={item.id}
-          />
+            imagen={item.thumbnail}
+            key={item.id}        
+          ></Card> 
         ))}
       </div>
     </>
