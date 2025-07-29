@@ -19,8 +19,8 @@ function Counter() {
     <>
       <h1>{count}</h1>
     <div className="Container-Counter">
-      <button className={"boton-Compra"} onClick={increment}>Increment</button>
-      <button className={"boton-Compra"} onClick={decrement}>Decrement</button>
+      <button className={"boton-Compra"} onClick={increment}>+</button>
+      <button className={"boton-Compra"} onClick={decrement}>-</button>
     </div>
     </>
   );

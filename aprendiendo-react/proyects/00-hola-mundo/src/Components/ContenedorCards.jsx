@@ -1,8 +1,8 @@
 import Card from "./Card";
-import "./App.css";
+import "../App.css";
 import { useState, useEffect} from "react";
 
-function Contenedor() {
+function ContenedorCards() {
   const [items, setItems] = useState([]);
 
 
@@ -33,4 +33,4 @@ function Contenedor() {
   );
 }
 
-export default Contenedor;
+export default ContenedorCards;

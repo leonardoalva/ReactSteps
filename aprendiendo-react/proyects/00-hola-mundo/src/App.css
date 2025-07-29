@@ -33,10 +33,6 @@
   }
 }
 
-.card {
-  padding: 1em;
-}
-
 .read-the-docs {
   color: #888;
 }
@@ -82,11 +78,11 @@
 
 .Div-Contenedor {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) );
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) );
   width: 100%;
   gap: 10px;
   background-color: rgb(229, 229, 229);
+  padding: 20px;
 }
 
 .Contenedor-App {
@@ -96,6 +92,7 @@
   justify-content: center;
   height: 100%;
   overflow: visible;
+  padding: 10px;
 }
 
 .Navbar {
@@ -201,4 +198,5 @@ h5{
   align-items: center;
   justify-content: center;
   margin: 10px;
+  gap: 10px;
 }
