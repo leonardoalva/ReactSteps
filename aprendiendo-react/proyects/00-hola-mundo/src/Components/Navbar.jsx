@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
+
 function Nabvar() {
+  const [categories, setCategories] = useState([]);
+  
+  useEffect(() => {
+    fetch('https://dummyjson.com/products/category-list')
+      .then((res) => res.json())
+      .then((cat) => setCategories(cat))
+      .then(() => console.log(categories));
+  }, []); // Añadido array de dependencias vacío
+
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark Navbar">
-      <div class="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark Navbar">
+      <div className="container-fluid">
         <h1 className="titulo logo">CompreAqui.com</h1>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDarkDropdown"
@@ -12,24 +23,30 @@ function Nabvar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
+        <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item dropdown">
               <button
-                class="btn btn-dark dropdown-toggle"
+                className="btn btn-dark dropdown-toggle"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Categorias
               </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Inicio
-                  </a>
-                </li>
+              <ul className="dropdown-menu dropdown-menu-dark" style={{ 
+                  maxHeight: "300px",  // Altura máxima antes de aparecer scroll
+                  overflowY: "auto",   // Habilita scroll vertical
+                  scrollbarWidth: "thin", // Estilo del scroll (Firefox)
+                }}
+              >{categories.map((category) => (
+                  <li key={category}> {/* Key movida aquí */}
+                    <a className="dropdown-item" href="#">
+                      {category}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </li>
             <ul className="Navbar-Links">

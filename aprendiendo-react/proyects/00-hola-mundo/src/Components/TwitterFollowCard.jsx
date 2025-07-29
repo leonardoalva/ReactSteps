@@ -5,8 +5,6 @@ function TwitterFollowCard({ userName, name, isFollowing }) {
  const buttonClassName = isFollowing ?
   "Tw-FollowCard-Boton-Siguiendo" : "Tw-FollowCard-Boton-Seguir";
 
-
-
   return (
     <div className="Containter-Tw-FollowCard" >
     <div className="Tw-FollowCard">

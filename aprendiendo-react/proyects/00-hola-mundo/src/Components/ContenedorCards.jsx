@@ -10,7 +10,7 @@ function ContenedorCards() {
   fetch("https://dummyjson.com/products")
     .then(res => res.json())
     .then(data => {
-      console.log(data);  // Primero imprimes
+      // console.log(data);  // Primero imprimes
       setItems(data.products);  // Luego actualizas el estado
     });
 }, []);
