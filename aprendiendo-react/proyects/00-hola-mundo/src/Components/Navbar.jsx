@@ -12,7 +12,7 @@ function Nabvar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark Navbar">
       <div className="container-fluid">
-        <h1 className="titulo logo">CompreAqui.com</h1>
+        <h1 className="logoTit">compreaqui.com</h1>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,7 +28,7 @@ function Nabvar() {
           <ul className="navbar-nav">
             <li className="nav-item dropdown">
               <button
-                className="btn btn-dark dropdown-toggle"
+                className="Margin-Btn btn btn-dark dropdown-toggle"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
@@ -48,15 +48,15 @@ function Nabvar() {
                 ))}
               </ul>
             </li>
-            <ul className="Navbar-Links">
+            <ul className="Center-Navbar">
               <li>
                 <a href="#">Inicio</a>
               </li>
               <li>
-                <a href="#">Another action</a>
+                <a href="#">Nosotros</a>
               </li>
               <li>
-                <a href="#">Something else here</a>
+                <a href="#">Como comprar</a>
               </li>
             </ul>
           </ul>

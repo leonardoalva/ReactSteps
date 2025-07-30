@@ -3,12 +3,30 @@ import ContenedorCards from "./Components/ContenedorCards";
 import Nabvar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import TwitterFollowCard from "./Components/TwitterFollowCard";
+import { withLoading } from "./Hocs/withLoading";
+import { useEffect, useState } from "react";
 
+const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 
 // importacion de planilla de twitter
 // import TwitterFollowCard from "./TwitterFollowCard";
 
 function App() {
+  const [items, setItems] = useState([]);
+
+
+  useEffect(() => {
+  fetch("https://dummyjson.com/products")
+    .then(res => res.json())
+    .then(data => {
+      // console.log(data);  // Primero imprimes
+      setTimeout(() => {
+        setItems(data.products);   // Luego imprimes los productos
+      }, 2000);  // Simula un retraso de 2 segundos
+    });
+}, []);
+
+
   // Datos de ejemplo para los usuarios de Twitter
   // const users = [
   //   {
@@ -57,7 +75,7 @@ function App() {
     <>
       <div className="Contenedor-App">
         <Nabvar />
-        <ContenedorCards />
+        <ContenedorCardsWithLoading items={items} />
       {/* usuarios pasados por props */}
       {/* {usuarios} */}
       </div>

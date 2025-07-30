@@ -1,15 +1,9 @@
 import Card from "./Card";
-import "../App.css";
-import { withLoading } from "../Hocs/withLoading";
 
-const CardWithLoading = withLoading(Card);
-
-function ContenedorCards(props) {
-
+function ItemListContainer(items) {
   return (
-    <>
       <div className="Div-Contenedor">
-        {props.items.map((item) => (
+        {items.map((item) => (
           <Card
             producto={item.title}
             descripcion={item.description}
@@ -21,8 +15,7 @@ function ContenedorCards(props) {
            
         ))}
       </div>
-    </>
   );
 }
 
-export default ContenedorCards;
+export default ItemListContainer;
