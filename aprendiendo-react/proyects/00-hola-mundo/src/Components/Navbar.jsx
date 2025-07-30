@@ -7,7 +7,6 @@ function Nabvar() {
     fetch('https://dummyjson.com/products/category-list')
       .then((res) => res.json())
       .then((cat) => setCategories(cat))
-      .then(() => console.log(categories));
   }, []); // Añadido array de dependencias vacío
 
   return (

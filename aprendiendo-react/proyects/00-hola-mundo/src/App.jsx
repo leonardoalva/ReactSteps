@@ -4,6 +4,7 @@ import Nabvar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import TwitterFollowCard from "./Components/TwitterFollowCard";
 
+
 // importacion de planilla de twitter
 // import TwitterFollowCard from "./TwitterFollowCard";
 

@@ -1,6 +1,9 @@
 import Card from "./Card";
 import "../App.css";
-import { useState, useEffect} from "react";
+import { useEffect, useState } from "react";
+import { withLoading } from "../Hocs/withLoading";
+
+const CardWithLoading = withLoading(Card);
 
 function ContenedorCards() {
   const [items, setItems] = useState([]);
@@ -19,14 +22,15 @@ function ContenedorCards() {
     <>
       <div className="Div-Contenedor">
         {items.map((item) => (
-          <Card
+          <CardWithLoading
             producto={item.title}
             descripcion={item.description}
             precio={item.price}
             categoria={item.category}
             imagen={item.thumbnail}
             key={item.id}        
-          ></Card> 
+          ></CardWithLoading>
+           
         ))}
       </div>
     </>
