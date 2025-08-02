@@ -92,9 +92,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-items: center;
   height: 100%;
   overflow: visible;
   padding: 10px;
+  margin: 0 auto;
   margin: 0 auto;
 }
 
