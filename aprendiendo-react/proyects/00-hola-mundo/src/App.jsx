@@ -14,18 +14,16 @@ const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 function App() {
   const [items, setItems] = useState([]);
 
-
   useEffect(() => {
-  fetch("https://dummyjson.com/products")
-    .then(res => res.json())
-    .then(data => {
-      // console.log(data);  // Primero imprimes
-      setTimeout(() => {
-        setItems(data.products);   // Luego imprimes los productos
-      }, 2000);  // Simula un retraso de 2 segundos
-    });
-}, []);
-
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);  // Primero imprimes
+        setTimeout(() => {
+          setItems(data.products); // Luego imprimes los productos
+        }, 2000); // Simula un retraso de 2 segundos
+      });
+  }, []);
 
   // Datos de ejemplo para los usuarios de Twitter
   // const users = [
@@ -70,14 +68,26 @@ function App() {
   //         isFollowing={user.isFollowing}
   //       />))
 
-  
   return (
     <>
       <div className="Contenedor-App">
-        <Nabvar />
-        <ContenedorCardsWithLoading items={items} />
-      {/* usuarios pasados por props */}
-      {/* {usuarios} */}
+        {/* <Nabvar /> */}
+        <TwitterFollowCard
+          name="Elon Musk"
+          userName="elonmusk"
+        />
+
+        <TwitterFollowCard
+          name="Bill Gates"
+          userName="BillGates"
+
+        />
+
+        <TwitterFollowCard/>
+
+        {/* <ContenedorCardsWithLoading items={items} /> */}
+        {/* usuarios pasados por props */}
+        {/* {usuarios} */}
       </div>
 
       <Footer className="footer" />
