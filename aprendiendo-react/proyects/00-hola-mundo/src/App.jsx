@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import TwitterFollowCard from "./Components/TwitterFollowCard";
 import { withLoading } from "./Hocs/withLoading";
 import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router";
 
 const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 
@@ -70,9 +71,17 @@ function App() {
 
   return (
     <>
-      <div className="Contenedor-App">
-        {/* <Nabvar /> */}
-        <TwitterFollowCard
+      <BrowserRouter>
+
+        <div className="Contenedor-App">
+          <Nabvar />
+          <Routes>
+            <Route path="/" element={<ContenedorCardsWithLoading items={items} />} />
+            <Route path="/nosotros" element={<div>nosotros</div>} />
+          </Routes>
+
+
+          {/* <TwitterFollowCard
           name="Elon Musk"
           userName="elonmusk"
         />
@@ -81,16 +90,16 @@ function App() {
           name="Bill Gates"
           userName="BillGates"
 
-        />
+        /> */}
 
-        <TwitterFollowCard/>
+          {/* <TwitterFollowCard/> */}
 
-        {/* <ContenedorCardsWithLoading items={items} /> */}
-        {/* usuarios pasados por props */}
-        {/* {usuarios} */}
-      </div>
+          {/* usuarios pasados por props */}
+          {/* {usuarios} */}
+        </div>
 
-      <Footer className="footer" />
+        <Footer className="footer" />
+      </BrowserRouter>
     </>
   );
 }

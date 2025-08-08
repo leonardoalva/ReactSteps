@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route,Link } from "react-router";
 
 function Nabvar() {
   const [categories, setCategories] = useState([]);
@@ -53,7 +54,7 @@ function Nabvar() {
                 <a href="#">Inicio</a>
               </li>
               <li>
-                <a href="#">Nosotros</a>
+                <Link to='/nosotros'>Nosotros</Link>
               </li>
               <li>
                 <a href="#">Como comprar</a>
