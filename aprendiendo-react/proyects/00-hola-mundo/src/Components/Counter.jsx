@@ -4,7 +4,6 @@ function Counter() {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        console.log(`El contador ha cambiado: ${count}`);
         // Aquí podrías hacer algo más, como enviar el valor a un servidor
     }, [count]);
 

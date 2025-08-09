@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route,Link } from "react-router";
 
-function Nabvar() {
+
+function Navbar() {
   const [categories, setCategories] = useState([]);
   
   useEffect(() => {
@@ -41,23 +42,21 @@ function Nabvar() {
                   scrollbarWidth: "thin", // Estilo del scroll (Firefox)
                 }}
               >{categories.map((category) => (
-                  <li key={category}> {/* Key movida aquí */}
-                    <a className="dropdown-item" href="#">
-                      {category}
-                    </a>
-                  </li>
+                <li key={category}>
+                  <Link to={`/category/${category}` } >{category}</Link>
+                </li>
                 ))}
               </ul>
             </li>
             <ul className="Center-Navbar">
               <li>
-                <a href="#">Inicio</a>
+                <Link to='/'>Inicio</Link>
               </li>
               <li>
                 <Link to='/nosotros'>Nosotros</Link>
               </li>
               <li>
-                <a href="#">Como comprar</a>
+                <Link to='/como_comprar'>Como comprar ?</Link>
               </li>
             </ul>
           </ul>
@@ -67,4 +66,4 @@ function Nabvar() {
   );
 }
 
-export default Nabvar;
+export default Navbar;
