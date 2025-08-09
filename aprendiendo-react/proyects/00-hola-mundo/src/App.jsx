@@ -5,7 +5,8 @@ import Footer from "./Components/Footer";
 import TwitterFollowCard from "./Components/TwitterFollowCard";
 import { withLoading } from "./Hocs/withLoading";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router";
+import { BrowserRouter, Routes, Route, Link, useParams } from "react-router";
+import CategoryPage from "./Components/CategoryPage";
 
 const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 
@@ -17,14 +18,11 @@ function App() {
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);  // Primero imprimes
-        setTimeout(() => {
-          setItems(data.products); // Luego imprimes los productos
-        }, 2000); // Simula un retraso de 2 segundos
-      });
+      .then(res => res.json())
+      .then(data => setItems(data.products));
   }, []);
+
+
 
   // Datos de ejemplo para los usuarios de Twitter
   // const users = [
@@ -72,14 +70,24 @@ function App() {
   return (
     <>
       <BrowserRouter>
-
         <div className="Contenedor-App">
           <Nabvar />
           <Routes>
-            <Route path="/" element={<ContenedorCardsWithLoading items={items} />} />
-            <Route path="/nosotros" element={<div>nosotros</div>} />
-          </Routes>
+            <Route
+              path="/"
+              element={<ContenedorCardsWithLoading items={items}/>}
+            />
+            <Route
+              path="/nosotros"
+              element={<div>nosotros</div>}
+            />
 
+                        <Route
+              path="/como_comprar"
+              element={<div>como comprar</div>}
+            />
+          <Route path="/category/:categoryName" element={<CategoryPage />} />
+          </Routes>
 
           {/* <TwitterFollowCard
           name="Elon Musk"

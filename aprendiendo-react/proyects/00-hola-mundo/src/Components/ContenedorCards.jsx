@@ -1,8 +1,7 @@
 import Card from "./Card";
 import "../App.css";
-import { withLoading } from "../Hocs/withLoading";
 
-const CardWithLoading = withLoading(Card);
+
 
 function ContenedorCards(props) {
 
@@ -25,4 +24,4 @@ function ContenedorCards(props) {
   );
 }
 
-export default ContenedorCards;
+export default ContenedorCards
