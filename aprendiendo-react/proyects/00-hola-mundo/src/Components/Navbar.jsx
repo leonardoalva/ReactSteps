@@ -42,6 +42,7 @@ function Navbar() {
                   scrollbarWidth: "thin", // Estilo del scroll (Firefox)
                 }}
               >{categories.map((category) => (
+
                 <li key={category}>
                   <Link to={`/category/${category}` } >{category}</Link>
                 </li>
@@ -51,11 +52,13 @@ function Navbar() {
             <ul className="Center-Navbar">
               <li>
                 <Link to='/'>Inicio</Link>
+                <Link to='/'>Inicio</Link>
               </li>
               <li>
                 <Link to='/nosotros'>Nosotros</Link>
               </li>
               <li>
+                <Link to='/como_comprar'>Como comprar ?</Link>
                 <Link to='/como_comprar'>Como comprar ?</Link>
               </li>
             </ul>

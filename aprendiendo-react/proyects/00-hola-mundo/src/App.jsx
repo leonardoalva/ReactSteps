@@ -22,6 +22,8 @@ function App() {
       .then((data) => setItems(data.products));
   }, []);
 
+
+
   // Datos de ejemplo para los usuarios de Twitter
   // const users = [
   //   {
