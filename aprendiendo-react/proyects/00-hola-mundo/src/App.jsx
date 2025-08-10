@@ -7,6 +7,7 @@ import { withLoading } from "./Hocs/withLoading";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import CategoryPage from "./Components/CategoryPage";
+import ItemDetailContainer from "./Components/ItemDetailContainer";
 
 const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 
@@ -81,6 +82,7 @@ function App() {
 
             <Route path="/como_comprar" element={<div>como comprar</div>} />
             <Route path="/category/:categoryName" element={<CategoryPage />} />
+            <Route path="/item/:id" element={<ItemDetailContainer/>} />
           </Routes>
 
           {/* <TwitterFollowCard

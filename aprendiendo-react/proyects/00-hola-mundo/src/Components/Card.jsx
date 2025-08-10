@@ -1,6 +1,8 @@
-import Counter from "./Counter";
+import { useNavigate } from "react-router";
 
-function Card({ producto, descripcion, precio, categoria, imagen }) {
+function Card({ producto, descripcion, precio, categoria, imagen, id }) {
+  const navigate = useNavigate();
+
   return (
     <>
       <article className="Card-Size">
@@ -11,7 +13,11 @@ function Card({ producto, descripcion, precio, categoria, imagen }) {
           <h5 className="Card-Categoria">{categoria}</h5>
           <p className="Card-Texto">{precio}</p>
         </header>
-        <Counter />
+        <button
+        variant="primary"
+        onClick={() => navigate(`/item/${id}`)}>
+          ver mas
+        </button>
       </article>
     </>
   );

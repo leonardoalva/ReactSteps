@@ -1,8 +1,6 @@
 import Card from "./Card";
 import "../App.css";
 
-
-
 function ContenedorCards(props) {
 
   return (
@@ -15,7 +13,8 @@ function ContenedorCards(props) {
             precio={item.price}
             categoria={item.category}
             imagen={item.thumbnail}
-            key={item.id}        
+            key={item.id}
+            id={item.id}        
           ></Card>
            
         ))}
