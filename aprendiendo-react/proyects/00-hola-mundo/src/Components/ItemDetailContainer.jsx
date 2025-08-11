@@ -14,7 +14,7 @@ function ItemDetailContainer() {
   }, [id]);
 
   return (
-    <div>
+    <div className="Div-Contenedor  Card-Size">
       <p>{detail?.title}</p>
       <p>{detail?.description}</p>
         <img className="Card-Img" src={detail?.thumbnail} alt="imagen rota" />
