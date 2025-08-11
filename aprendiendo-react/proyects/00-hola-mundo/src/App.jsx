@@ -85,21 +85,6 @@ function App() {
             <Route path="/item/:id" element={<ItemDetailContainer/>} />
           </Routes>
 
-          {/* <TwitterFollowCard
-          name="Elon Musk"
-          userName="elonmusk"
-        />
-
-        <TwitterFollowCard
-          name="Bill Gates"
-          userName="BillGates"
-
-        /> */}
-
-          {/* <TwitterFollowCard/> */}
-
-          {/* usuarios pasados por props */}
-          {/* {usuarios} */}
         </div>
 
         <Footer className="footer" />

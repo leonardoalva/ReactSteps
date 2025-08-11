@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import Counter from "./Counter"
+import ItemDetail from "./ItemDetail"
 
 function ItemDetailContainer() {
   const [detail, setDetail] = useState();
@@ -14,12 +14,7 @@ function ItemDetailContainer() {
   }, [id]);
 
   return (
-    <div className="Div-Contenedor  Card-Size">
-      <p>{detail?.title}</p>
-      <p>{detail?.description}</p>
-        <img className="Card-Img" src={detail?.thumbnail} alt="imagen rota" />
-      <Counter/>
-    </div>
+    <ItemDetail detail={detail}/>
   );
 }
 
