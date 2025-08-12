@@ -1,8 +1,18 @@
 import { useNavigate } from "react-router";
 import CartWidget from './CartWidget'
+import Counter from "./Counter";
 
 function Card({ producto, descripcion, precio, categoria, imagen, id }) {
   const navigate = useNavigate();
+  // Crear un objeto item con los datos del producto
+  const item = {
+    title: producto,
+    description: descripcion,
+    price: precio,
+    category: categoria,
+    thumbnail: imagen,
+    id: id
+  };
 
   return (
     <>
@@ -19,7 +29,7 @@ function Card({ producto, descripcion, precio, categoria, imagen, id }) {
         onClick={() => navigate(`/item/${id}`)}>
           ver mas
         </button>
-
+        <Counter item={item}/>
       </article>
     </>
   );

@@ -7,7 +7,7 @@ function ContenedorCards(props) {
     <>
       <div className="Div-Contenedor">
         {props.items.map((item) => (
-          <Card
+          <Card item={props}
             producto={item.title}
             descripcion={item.description}
             precio={item.price}

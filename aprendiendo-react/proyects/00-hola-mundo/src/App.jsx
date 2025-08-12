@@ -83,7 +83,7 @@ function App() {
             <Route path="/nosotros" element={<div>nosotros</div>} />
 
             <Route path="/como_comprar" element={<div>como comprar</div>} />
-            <Route path="/category/:categoryName" element={<CategoryPage />} />
+            <Route path="/category/:categoryName" element={<CategoryPage items={items}/>} />
             <Route path="/item/:id" element={<ItemDetailContainer/>} />
           </Routes>
 
