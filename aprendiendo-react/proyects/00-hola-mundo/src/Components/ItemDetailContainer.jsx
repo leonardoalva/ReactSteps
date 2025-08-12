@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import ItemDetail from "./ItemDetail"
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
   const [detail, setDetail] = useState();
@@ -13,9 +13,7 @@ function ItemDetailContainer() {
       .then((data) => setDetail(data));
   }, [id]);
 
-  return (
-    <ItemDetail detail={detail}/>
-  );
+  return <ItemDetail detail={detail} />;
 }
 
 export default ItemDetailContainer;

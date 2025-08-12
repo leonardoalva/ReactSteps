@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import CartWidget from './CartWidget'
 
 function Card({ producto, descripcion, precio, categoria, imagen, id }) {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function Card({ producto, descripcion, precio, categoria, imagen, id }) {
         onClick={() => navigate(`/item/${id}`)}>
           ver mas
         </button>
+
       </article>
     </>
   );

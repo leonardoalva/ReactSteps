@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import CategoryPage from "./Components/CategoryPage";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
+import CartWidget from "./Components/CartWidget";
+
 
 const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 

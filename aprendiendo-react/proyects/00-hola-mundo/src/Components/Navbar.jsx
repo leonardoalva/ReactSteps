@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route,Link } from "react-router";
-
+import CartWidget from "./CartWidget";
 
 function Navbar() {
   const [categories, setCategories] = useState([]);
@@ -15,6 +15,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark Navbar">
       <div className="container-fluid">
         <h1 className="logoTit">compreaqui.com</h1>
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -64,7 +65,9 @@ function Navbar() {
             </ul>
           </ul>
         </div>
+        <CartWidget/>
       </div>
+
     </nav>
   );
 }
