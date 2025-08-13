@@ -3,10 +3,22 @@ import { useState } from "react";
 
 function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
-  console.log(cart)
+  console.log(cart);
 
-  const agregarAlCarrito= (prod) => {setCart([...cart, prod])};
-    
+  const agregarAlCarrito = (prod) => {
+    const isInCart = cart.some((item) => item.id === prod.id);
+
+    if (isInCart) {
+      const productoRepetido = cart.find((item) => item.id === prod.id);
+      const cartSinElProducto = cart.filter((item) => item.id !== prod.id);
+      setCart([
+        ...cartSinElProducto,
+        { ...productoRepetido, count: productoRepetido.count + prod.count },
+      ]);
+    } else {
+      setCart([...cart, prod]);
+    }
+  };
 
   const getCant = () => {
     const cantidades = cart.map((prod) => prod.count);
