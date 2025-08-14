@@ -18,11 +18,11 @@ function Counter({item}) {
 
   return (
     <>
-      <h1>{count}</h1>
     <div className="Container-Counter">
-      <button className={"boton-Compra"} onClick={increment}>+</button>
       <button className={"boton-Compra"} onClick={decrement}>-</button>
-      <button className={"boton-Compra"} onClick={agregarItem}>agregar al carrito</button>
+      <h1>{count}</h1>
+      <button className={"boton-Compra"} onClick={increment}>+</button>
+      <button className={"boton-Compra"} onClick={agregarItem}>agregar</button>
     </div>
     </>
   );
