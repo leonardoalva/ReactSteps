@@ -27,7 +27,7 @@ export const getProductsByCategory = async (categoria) => {
   const productos = [];
 
   querySnapshot.forEach((doc) => {
-    productos.push({ ...doc.data(), id: doc.id }); // Corregido doc.data() en lugar de doc.data
+    productos.push({ ...doc.data(), id: doc.id }); 
   });
   
   return productos;
