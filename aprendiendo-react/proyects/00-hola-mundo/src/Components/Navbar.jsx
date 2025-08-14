@@ -3,18 +3,11 @@ import { BrowserRouter, Routes, Route,Link } from "react-router";
 import CartWidget from "./CartWidget";
 
 function Navbar() {
-  const [categories, setCategories] = useState([]);
-  
-  useEffect(() => {
-    fetch('https://dummyjson.com/products/category-list')
-      .then((res) => res.json())
-      .then((cat) => setCategories(cat))
-  }, []); // Añadido array de dependencias vacío
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark Navbar">
+    <nav className="navbar navbar-expand-lg Navbar">
       <div className="container-fluid">
-        <h1 className="logoTit">compreaqui.com</h1>
+        <h1 className="logoTit">siembra</h1>
         
         <button
           className="navbar-toggler"
@@ -42,12 +35,14 @@ function Navbar() {
                   overflowY: "auto",   // Habilita scroll vertical
                   scrollbarWidth: "thin", // Estilo del scroll (Firefox)
                 }}
-              >{categories.map((category) => (
-
-                <li key={category}>
-                  <Link to={`/category/${category}` } >{category}</Link>
+              >
+                <li>
+                  <Link to={`/category/panaderia` } >panaderia</Link>
                 </li>
-                ))}
+                <li>
+                  <Link to={`/category/pasteleria` } >pasteleria</Link>
+                </li>
+  
               </ul>
             </li>
             <ul className="Center-Navbar">

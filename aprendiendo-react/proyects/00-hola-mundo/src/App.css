@@ -38,6 +38,7 @@
   color: #888;
 }
 
+
 .Card-Precio {
   font-size: 15px;
   color: #000000;
@@ -82,7 +83,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   width: 100%;
   gap: 10px;
-  background-color: rgb(229, 229, 229);
+  background-color: rgb(162, 162, 162);
   padding: 20px;
 }
 
@@ -102,7 +103,7 @@
 
 .Navbar {
   width: 100%;
-  background-color: #282c34;
+  background-color: #2a7038;
   color: white;
   display: flex;
   position: sticky;
@@ -181,6 +182,7 @@
 
 .Card-Img {
   width: 100%;
+  border-radius: 20px;
 }
 
 h5 {

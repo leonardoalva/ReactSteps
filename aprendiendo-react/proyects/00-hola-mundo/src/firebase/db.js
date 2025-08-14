@@ -21,14 +21,14 @@ export const getProducts = async () => {
     return productos
 }
 
+export const getProductsByCategory = async (categoria) => {
+  const q = query(collection(db, "productos"), where("categoria", "==", categoria));
+  const querySnapshot = await getDocs(q);
+  const productos = [];
 
-export const getProductsByCategory = async(categoria)=>{
-const q = query(collection(db, "productos"), where("categoria", "==", categoria));
-const querySnapshot = await getDocs(q);
-const productos = []
-
-querySnapshot.forEach((doc) => {
-    productos.push({...doc.data, id: doc.id})
-})
-return productos
+  querySnapshot.forEach((doc) => {
+    productos.push({ ...doc.data(), id: doc.id }); // Corregido doc.data() en lugar de doc.data
+  });
+  
+  return productos;
 }
