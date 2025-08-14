@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import CategoryPage from "./Components/CategoryPage";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import CartWidget from "./Components/CartWidget";
-
+import { getProducts } from "./firebase/db";
 
 const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 
@@ -20,12 +20,10 @@ function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://dummyjson.com/products")
-      .then((res) => res.json())
-      .then((data) => setItems(data.products));
+      getProducts()
+        .then(products => setItems(products))
+
   }, []);
-
-
 
   // Datos de ejemplo para los usuarios de Twitter
   // const users = [
@@ -83,10 +81,12 @@ function App() {
             <Route path="/nosotros" element={<div>nosotros</div>} />
 
             <Route path="/como_comprar" element={<div>como comprar</div>} />
-            <Route path="/category/:categoryName" element={<CategoryPage items={items}/>} />
-            <Route path="/item/:id" element={<ItemDetailContainer/>} />
+            <Route
+              path="/category/:categoryName"
+              element={<CategoryPage items={items} />}
+            />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
           </Routes>
-
         </div>
 
         <Footer className="footer" />

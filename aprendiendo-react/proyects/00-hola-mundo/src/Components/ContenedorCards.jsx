@@ -8,11 +8,11 @@ function ContenedorCards(props) {
       <div className="Div-Contenedor">
         {props.items.map((item) => (
           <Card item={props}
-            producto={item.title}
-            descripcion={item.description}
-            precio={item.price}
-            categoria={item.category}
-            imagen={item.thumbnail}
+            producto={item.nombre}
+            descripcion={item.descripcion}
+            precio={item.precio}
+            categoria={item.categoria}
+            imagen={item.imagen}
             key={item.id}
             id={item.id}        
           ></Card>
