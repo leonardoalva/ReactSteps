@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "./ItemDetail";
+import { getProduct } from "../firebase/db";
+
 
 function ItemDetailContainer() {
   const [detail, setDetail] = useState();
@@ -8,9 +10,8 @@ function ItemDetailContainer() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => setDetail(data));
+      getProduct(id)
+      .then((producto) => setDetail(producto));
   }, [id]);
 
   return <ItemDetail detail={detail} />;

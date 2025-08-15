@@ -1,8 +1,9 @@
-
+import { useNavigate } from 'react-router';
 import CartWidget from './CartWidget'
 import Counter from "./Counter";
 
 function Card({ producto, descripcion, precio, categoria, imagen, id }) {
+  const navigate = useNavigate()
   const item = {
     title: producto,
     description: descripcion,
@@ -22,11 +23,11 @@ function Card({ producto, descripcion, precio, categoria, imagen, id }) {
           <div className="Card-Description">{descripcion}</div>
           <h1 className="Card-Precio">${precio}</h1>
         </div>
-        {/* <button
+        <button
         variant="primary"
         onClick={() => navigate(`/item/${id}`)}>
           ver mas
-        </button> */}
+        </button>
         <Counter item={item}/>
       </article>
     </>

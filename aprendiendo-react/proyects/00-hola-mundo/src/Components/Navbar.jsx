@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route,Link } from "react-router";
 import CartWidget from "./CartWidget";
 
@@ -60,7 +59,8 @@ function Navbar() {
             </ul>
           </ul>
         </div>
-        <CartWidget/>
+        <CartWidget
+        />
       </div>
 
     </nav>

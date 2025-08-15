@@ -3,7 +3,9 @@ import {
     collection,
     getDocs,
     query,
-    where
+    where,
+    doc,
+    getDoc,
 
 } from "firebase/firestore";
 import {app} from './config'
@@ -31,4 +33,16 @@ export const getProductsByCategory = async (categoria) => {
   });
   
   return productos;
+}
+
+export const getProduct = async (id) => {
+const docRef = doc(db, "productos", id);
+const docSnap = await getDoc(docRef);
+
+if (docSnap.exists()) {
+  console.log("Document data:", docSnap.data());
+  return{...docSnap.data(), id: docSnap.id}
+} else {
+  return null
+}
 }

@@ -10,6 +10,7 @@ import CategoryPage from "./Components/CategoryPage";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
 import CartWidget from "./Components/CartWidget";
 import { getProducts } from "./firebase/db";
+import CartView from "./Components/CartView";
 
 const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 
@@ -80,6 +81,7 @@ function App() {
             />
             <Route path="/nosotros" element={<div>nosotros</div>} />
 
+            <Route path="/CartView" element={<CartView/>}/>
             <Route path="/como_comprar" element={<div>como comprar</div>} />
 <Route
   path="/category/:categoryName"
