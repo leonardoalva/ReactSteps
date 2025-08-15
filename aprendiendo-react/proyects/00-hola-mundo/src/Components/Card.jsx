@@ -5,11 +5,11 @@ import Counter from "./Counter";
 function Card({ producto, descripcion, precio, categoria, imagen, id }) {
   const navigate = useNavigate()
   const item = {
-    title: producto,
-    description: descripcion,
-    price: precio,
-    category: categoria,
-    thumbnail: imagen,
+    producto: producto,
+    descripcion: descripcion,
+    precio: precio,
+    categoria: categoria,
+    imagen: imagen,
     id: id
   };
 

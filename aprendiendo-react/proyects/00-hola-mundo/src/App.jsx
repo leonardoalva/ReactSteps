@@ -2,13 +2,11 @@ import "./App.css";
 import ContenedorCards from "./Components/ContenedorCards";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import TwitterFollowCard from "./Components/TwitterFollowCard";
 import { withLoading } from "./Hocs/withLoading";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import CategoryPage from "./Components/CategoryPage";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
-import CartWidget from "./Components/CartWidget";
 import { getProducts } from "./firebase/db";
 import CartView from "./Components/CartView";
 

@@ -6,7 +6,6 @@ import { getProduct } from "../firebase/db";
 
 function ItemDetailContainer() {
   const [detail, setDetail] = useState();
-
   const { id } = useParams();
 
   useEffect(() => {
