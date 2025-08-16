@@ -1,6 +1,7 @@
 import { CartContext } from "./CartContext";
 import { useState } from "react";
 
+
 function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
   console.log(cart);
@@ -26,8 +27,15 @@ function CartProvider({ children }) {
     return cantidad;
   };
 
+  const getTotal = ()=>{
+    const totales = cart.map(prod=> prod.count*prod.precio)
+    const total = totales.reduce((acc,current)=> acc+current,0)
+
+    return total
+  }
+
   return (
-    <CartContext.Provider value={{ cart, agregarAlCarrito, getCant }}>
+    <CartContext.Provider value={{ cart, agregarAlCarrito, getCant, getTotal }}>
       {children}
     </CartContext.Provider>
   );

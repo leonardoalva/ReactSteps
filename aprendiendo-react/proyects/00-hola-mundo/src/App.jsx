@@ -10,6 +10,7 @@ import ItemDetailContainer from "./Components/ItemDetailContainer";
 import { getProducts } from "./firebase/db";
 import CartView from "./Components/CartView";
 
+
 const ContenedorCardsWithLoading = withLoading(ContenedorCards);
 
 // importacion de planilla de twitter
